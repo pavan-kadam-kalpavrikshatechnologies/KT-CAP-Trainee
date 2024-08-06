@@ -1,0 +1,22 @@
+@server = http://localhost:4004/v2/odata/v4/catalog
+
+
+###------------------------------------------------------------------------
+## service info
+post {{server}}/Login
+Content-Type: application/json
+
+{
+    "EmpID":5,
+    "EmpName":"Kadam",
+    "EmpAge":"22"
+}
+
+###------------------------------------------------------------------------
+## service info
+GET {{server}}/Login
+Content-Type: application/json
+###------------------------------------------------------------------------
+## service info
+post {{server}}/Employee
+Content-Type: application/json
