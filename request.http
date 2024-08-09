@@ -3,20 +3,59 @@
 
 ###------------------------------------------------------------------------
 ## service info
-post {{server}}/Login
+POST  {{server}}/Login
 Content-Type: application/json
 
 {
-    "EmpID":5,
-    "EmpName":"Kadam",
-    "EmpAge":"22"
+  "EmpID": "1",
+  "EmpName": "Kadam",
+  "EmpAge": "22",
+  "employee": 
+    {
+      "EmpID": "1",
+      "firstName": "Pavan",
+      "lastName": "Kadam"
+    }
 }
+
 
 ###------------------------------------------------------------------------
 ## service info
 GET {{server}}/Login
 Content-Type: application/json
+
 ###------------------------------------------------------------------------
 ## service info
-post {{server}}/Employee
+PUT {{server}}/Login/5
 Content-Type: application/json
+
+{   
+    "EmpName":"Shinde",
+    "EmpAge":"32"
+}
+
+###------------------------------------------------------------------------
+## service info
+DELETE  {{server}}/Login/2
+Content-Type: application/json
+
+###------------------------------------------------------------------------
+## service info
+GET  {{server}}/Employee?$expand=login
+Content-Type: application/json
+
+###------------------------------------------------------------------------
+## service info
+GET {{server}}/LoginData
+Content-Type: application/json
+
+###------------------------------------------------------------------------
+## service info
+POST {{server}}/LoginAction
+Content-Type: application/json
+
+{
+  "EmpID":"3",
+  "EmpName":"Vikas",
+  "EmpAge":"22"
+}
